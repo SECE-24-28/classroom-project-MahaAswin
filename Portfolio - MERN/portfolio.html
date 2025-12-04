@@ -1,0 +1,264 @@
+<html>
+    <title>Portfolio</title>
+    <style>
+        *{
+            margin: 0px;
+            border: 0px;
+            box-sizing: border-box;
+        }
+        #nav{
+            background-color: black;
+            width: 100%;
+            min-height: 50px;
+            line-height: 50px;
+            display: flex;
+            gap: 10px;
+        }
+        .home,.about,.qualification,.certification,.contact,.skill{
+            color: white;
+            width: 70%;
+            min-height: 50px;
+            line-height: 50px;
+            padding-left: 100px;
+        }
+        .name{
+            width: 100%;
+            min-height: 50px;
+            line-height: 50px;
+        }
+        .main{
+            width: 100%;
+            min-height: 90%;
+            line-height: 90%;
+            display: flex;
+            padding-top: 20px;
+        }
+        .photo{
+            width: 30%;
+            background-color: rgb(212, 212, 198); 
+            padding-top: 100px;
+            padding-bottom: 80px;
+            padding-left: 40px;
+        }
+        .content{
+            width: 70%;
+            background-color: lightgray;
+            min-height: 90%;
+            line-height: 90%;
+        }
+        #aboutmepara{
+            padding-top: 50px;
+            text-align: justify;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+        .block{
+            background-color:gray;
+            width: 100%;
+            min-height: 100%;
+            margin-bottom: 20px;
+        }
+        .table{
+            text-align: center;
+            width: 80%;
+            margin: 50px auto;
+            padding: 25px;
+            border: 3px solid black;
+            background-color: white;
+            
+        }
+        th, td {
+        padding: 12px;
+        }
+
+        th {
+            font-weight: bold;
+            border-bottom: 2px solid black;
+        }
+
+        td {
+            border-bottom: 1px solid #999;
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+            padding-bottom: 25px;
+        }
+        .image{
+            display: flex;
+            gap: 10%;
+        }
+        a{
+            color: white;
+            font-size: large;
+            text-decoration: none;
+        }
+        a:hover{
+            color: violet;
+        }
+
+    </style>
+    <body>
+        <div id="nav">
+            <div class="name">
+                <h3 style="color: white;">MAHA ASWIN S B </h3>
+            </div>
+            <div class="home">
+                <a href="#nav">Home</a>
+            </div>
+            <div class="about">
+                <a href="#nav">About Me</a>
+            </div>
+            <div class="qualification">
+                <a href="#q-table">Qualification</a>
+            </div>
+            <div class="certification">
+                <a href="#c-table">Certification</a>
+            </div>
+            <div class="skill">
+                <a href="#s-table">Skill</a>
+            </div>
+            <div class="contact">
+                <a href="#contactME">Contact Me</a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="photo">
+                <img src="d:\Documents\MERN\Portfolio - MERN\IMG_20250619_191847_080.webp" alt="My Photo" width="300px" height=auto;>
+            </div>
+            <div class="content">
+                <br>
+                <h1>About Me</h1>
+                <br>
+                <p id="aboutmepara" >
+                    Hello! My name is Maha Aswin, and I am currently studying in the 2nd year of Information Technology. I come from Kangayam, Tamil Nadu, and I feel proud to pursue my passion in the IT field. I chose Information Technology because I have always been fascinated by computers, coding, and the way technology shapes our world. In my daily life as a student, I balance my academic duties and personal growth with enthusiasm and curiosity.
+
+At college, I actively participate in classes and enjoy learning programming languages, data structures, and software-related subjects. I try to be attentive and dedicated in each lecture, because I believe that strong fundamentals are important for success. Besides academics, I have a keen interest in exploring new technologies — I often read articles, watch tutorials, and experiment with code in my free time. I also enjoy collaborating with classmates on projects and believe teamwork improves learning and creativity. Working in groups helps me build communication skills and learn from others’ perspectives.
+
+Outside of study and coding, I like to spend time relaxing, reflecting on my goals, and planning what I want to achieve in the future. I value determination, hard work and honesty — qualities I believe will help me succeed in both studies and later professional life. I dream of becoming a competent IT professional, contributing to meaningful projects, possibly building software or applications that solve real problems for people. I am excited about the journey ahead, committed to learning and improving myself, and looking forward to new challenges and opportunities in the years to come.
+
+Thank you for taking the time to know a little about me — I look forward to a future full of learning, growth, and fulfilment.
+                </p>
+            </div>
+        </div>
+        <br><br>
+        <div class="block"><br><br><br><br><br>
+            <h1 style="text-align: center;">Qualification</h1><br><br><br>
+            <div id="q-table">
+                <table class="table">
+                    <tr>
+                        <th>Institution - Name</th>
+                        <th>Degree</th>
+                        <th>Year</th>
+                        <th>Percentage</th>
+                    </tr>
+                    <tr>
+                        <td>Bala Matric Hr Sec School</td>
+                        <td>10th</td>
+                        <td>2021-2022</td>
+                        <td>81.0</td>
+                    </tr>
+                    <tr>
+                        <td>Bala Matric Hr Sec School</td>
+                        <td>12th</td>
+                        <td>2023-2024</td>
+                        <td>86.0</td>
+                    </tr>
+                    <tr>
+                        <td>Sri Eshwar College of Engineering</td>
+                        <td>B.tech - IT</td>
+                        <td>2024-2028</td>
+                        <td>9.7 CGPA</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="block"><br><br><br><br><br>
+            <h1 style="text-align: center;">Certification</h1><br><br><br>
+            <div id="c-table">
+                <table class="table">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Year</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>HTML,CSS and JavaScript</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Python Basics</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Java Programming</td>
+                        <td>2025</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="image" style="padding-left: 100px;">
+                <div class="image1">
+                    <img src="d:\Documents\MERN\Portfolio - MERN\image1.jpg" alt="Photo" width="300px" height=auto;>
+                </div>
+                <div class="image2">
+                    <img src="d:\Documents\MERN\Portfolio - MERN\image22.jpg" alt="Python" width="300px" height=auto;>
+                </div>
+                <div class="image3">
+                    <img src="d:\Documents\MERN\Portfolio - MERN\image3.jpg" alt="Java" width="300px" height=auto;>
+                </div>
+            </div>
+        </div>
+        <div class="block"><br><br><br><br><br>
+            <h1 style="text-align: center;">Skills</h1><br><br><br>
+            <div id="s-table">
+                <table class="table">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Skills</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Communication</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Java</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Python</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>HTML & CSS</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>JavaScript</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="contactME">
+            <center>
+                <footer>
+                    <h1>Contact </h1><br><br><br>
+                    <div class="form">
+                        <h3>E-Mail : mahaaswinsb@gmail.com</h3>
+                        <h3>Official Mail : mahaaswin.sb2024it@sece.ac.in</h3>
+                        <h3>Mobile No : 9344179922</h3>
+                    </div>
+                </footer> 
+            </center>
+        </div>
+    </body>
+</html>
