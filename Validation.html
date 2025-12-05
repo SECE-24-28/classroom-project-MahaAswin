@@ -1,0 +1,185 @@
+<html>
+    <title>From - Validation</title>
+    <style>
+        body{
+            background-color: grey;
+            font-family: Arial;
+        }
+
+        #form{
+            background-color: white;
+            width: 35%;
+            padding: 30px;
+            margin: 5% auto;
+            border-radius: 15px;
+        }
+
+        .input{
+            margin-bottom: 12px;
+        }
+
+        .input label{
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .input input{
+            width: 70%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .error-text{
+            font-size: 14px;
+            color: red;
+            margin-top: 5px;
+            height: 16px;
+        }
+
+        .error-input{
+            border: 2px solid red !important;
+        }
+
+        .success-input{
+            border: 2px solid rgb(4, 215, 4) !important;
+        }
+         #s-button{
+            background-color: rgb(8, 198, 8);
+            border-radius: 10px;
+            width: 80px;
+            min-height: 50px;
+        }
+        #r-button{
+            background-color: #777;
+            border-radius: 10px;
+            width: 80px;
+            min-height: 50px;
+        }
+
+        #s-button:hover{
+            background-color: greenyellow
+        }
+        #s-button:active{
+            background-color: rgb(8, 198, 8);;
+        }
+        #r-button:hover{
+            background-color: #555;
+        }
+        #r-button:active{
+            background-color: #777;
+        }
+    </style>
+    <body>
+        <form id="form">
+            <div class="input">
+                <label for="name">Enter name</label>
+                <input id="name" name="name" type="text">
+                <div class="error-text"></div>
+            </div>
+            <div class="input">
+                <label for="e-mail">E-mail</label>
+                <input id="e-mail" type="email">
+                <div class="error-text"></div>
+            </div>
+            <div class="input">
+                <label for="password">Password</label>
+                <input id="password" type="password">
+                <div class="error-text"></div>
+            </div>
+            <div class="input">
+                <label for="password">Confirm Password</label>
+                <input id="cpassword" type="password">
+                <div class="error-text"></div>
+            </div>
+            <button id="s-button" type="submit">Submit</button>
+            <button id="r-button" type="reset">Reset</button>
+        </form>
+    </body>
+    <script>
+        const form=document.getElementById("form");
+        const name=document.getElementById("name");
+        const email=document.getElementById("e-mail");
+        const password=document.getElementById("password");
+        const cpassword=document.getElementById("cpassword");
+
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            validateInputs();
+        })
+
+        function validateInputs(){
+            const nameV=name.value.trim();
+            const emailV=email.value.trim();
+            const passwordV=password.value.trim();
+            const cpasswordV=cpassword.value.trim();
+
+            if(nameV===''){
+                setError(name,"Username is required");
+            }
+            else{
+                setSuccess(name);
+            }
+
+            if(emailV===''){
+                setError(email,"Email is required");
+            }
+            else if(!validateEmail(emailV)){
+                setError(email,"Enter a valid email");
+            }
+            else{
+                setSuccess(email);
+            }
+
+            if(passwordV===''){
+                setError(password,"Password is required");
+            }
+            else if(passwordV.length<8){
+                setError(password,"Password must be more than 8 character");
+            }
+            else{
+                setSuccess(password);
+            }
+
+            if(cpasswordV===''){
+                setError(cpassword,"Confirm the password");
+            }
+            else if(cpasswordV!==passwordV){
+                setError(cpassword,"Password does not match");
+            }
+            else{
+                setSuccess(cpassword);
+            }
+        }
+
+        function setError(element, message){
+            const parent = element.parentElement;
+            const errorBox = parent.querySelector('.error-text');
+
+            errorBox.innerText = message;
+
+            element.classList.add("error-input");
+            element.classList.remove("success-input");
+        }
+
+    function setSuccess(element){
+            const parent = element.parentElement;
+            const errorBox = parent.querySelector('.error-text');
+
+            errorBox.innerText = "";
+
+            element.classList.add("success-input");
+            element.classList.remove("error-input");
+        }
+
+        const validateEmail=(email)=>{
+            return String(email)
+            .toLowerCase()
+            .match(
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            );
+        };
+    </script>
+</html>
