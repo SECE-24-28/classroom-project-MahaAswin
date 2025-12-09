@@ -1,0 +1,65 @@
+<html>
+    <title>ANIMATION</title>
+    <style>
+        .main{
+            width: 50%;
+            min-height: 700px;
+            background-color: black;
+        }
+        .box{
+            width: 50px;
+            min-height: 50px;
+            background-color: orange;
+            border-radius: 10px;
+            animation: move 2s ease 2s infinite alternate;
+            margin-bottom: 10px;
+        }
+        .sam{
+            display: flex;
+        }
+        .box1{
+            width: 50px;
+            min-height: 50px;
+            background-color: lightblue;
+            border-radius: 10px;
+            animation: move-down 5s ease 0s 2 alternate;
+            margin-bottom: 10px;
+        }
+        .box2{
+            width: 50px;
+            min-height: 50px;
+            background-color: red;
+            border-radius: 10px;
+            animation: move-reverse 2s ease 1s infinite alternate;
+            margin-bottom: 10px;
+        }
+
+        @keyframes move {
+            from {transform: translateX(0px);}
+            to {transform: translateX(550px);}
+            0% {transform: rotate(100deg);}
+        }
+
+        @keyframes move-down {
+            0% {transform: translateY(0px);}
+            100% {transform: translateY(550px);}
+            0% {transform: scale(2);}
+        }
+        @keyframes move-reverse {
+            from {transform: translateX(550px);}
+            to {transform: translateX(0px);}
+        }
+    </style>
+    <body>
+        <div class="main">
+            <div class="sam">
+                <div class="box"></div>
+                <div class="box2"></div>
+            </div>
+            
+            <div class="box1"></div>
+            
+        </div>
+        
+    </body>
+</html>
